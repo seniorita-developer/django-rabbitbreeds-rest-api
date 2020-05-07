@@ -21,6 +21,7 @@ from breedapi import views
 
 router = routers.DefaultRouter()
 router.register(r'breeds', views.BreedViewSet)
+router.register(r'breeds-with-images', views.BreedsWithImagesViewSet, basename='breeds-with-images')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
