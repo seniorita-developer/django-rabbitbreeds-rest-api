@@ -25,5 +25,6 @@ router.register(r'breeds-with-images', views.BreedsWithImagesViewSet, basename='
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('random/', views.GetRandomBreed.as_view(), name="random"),
 ]
