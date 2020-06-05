@@ -1,0 +1,88 @@
+{% load static %}
+{% comment %}
+This template is used to serve the 'Swagger UI' view of the API.
+
+This template is derived from index.html in swagger-ui-dist
+(https://github.com/swagger-api/swagger-ui/blob/master/dist/index.html).
+
+All static files from swagger-ui-dist must be present under the app's static directory.
+
+To update Swagger, download swagger-dist-ui and copy all files to the 'swagger-dist-ui'
+directory.  You will then need to compare the swagger-dist-ui index.html with this file
+and merge any changes.
+
+{% endcomment %}
+
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rabbit Breeds API</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'swagger-ui.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon-32x32.png' %}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static 'favicon-16x16.png' %}" sizes="16x16" />
+    <style>
+      html {
+        box-sizing: border-box;
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+      }
+
+      *,
+      *:before,
+      *:after
+      {
+        box-sizing: inherit;
+      }
+
+      body{
+        margin:0;
+        background: #fafafa;
+      }
+
+      #api-root {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-family: sans-serif;
+        color: #3b4151;
+        font-size: 16px;
+      }
+       #api-root a {
+       margin: auto 8px;
+       text-decoration: auto;
+       }
+    </style>
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+    <div id="api-root">Go to <a href="/"> Api Root</a></div>
+
+    <script src="{% static 'swagger-ui-bundle.js' %}"> </script>
+    <script src="{% static 'swagger-ui-standalone-preset.js' %}"> </script>
+    <script src="{% static 'topbar.js' %}"> </script>
+    <script>
+    window.onload = function() {
+      // Begin Swagger UI call region
+      const ui = SwaggerUIBundle({
+        url: "{% static 'schema.yaml' %}",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+      })
+      // End Swagger UI call region
+
+      window.ui = ui
+    }
+  </script>
+  </body>
+</html>

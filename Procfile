@@ -1,0 +1,1 @@
+web: gunicorn rabbitbreedapi.rabbitbreedapi.wsgi --log-file -

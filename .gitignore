@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+rabbitbreedapi/rabbitbreedapi/secret_settings.py
+.idea/workspace.xml
+rabbitbreedapi/rabbitbreedapi/breedapi/static/admin/
+rabbitbreedapi/rabbitbreedapi/breedapi/static/rest_framework/
