@@ -18,13 +18,12 @@ and merge any changes.
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Swagger UI</title>
+    <title>Rabbit Breeds API</title>
     <link rel="stylesheet" type="text/css" href="{% static 'swagger-ui.css' %}">
     <link rel="icon" type="image/png" href="{% static 'favicon-32x32.png' %}" sizes="32x32" />
     <link rel="icon" type="image/png" href="{% static 'favicon-16x16.png' %}" sizes="16x16" />
     <style>
-      html
-      {
+      html {
         box-sizing: border-box;
         overflow: -moz-scrollbars-vertical;
         overflow-y: scroll;
@@ -37,16 +36,29 @@ and merge any changes.
         box-sizing: inherit;
       }
 
-      body
-      {
+      body{
         margin:0;
         background: #fafafa;
       }
+
+      #api-root {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        font-family: sans-serif;
+        color: #3b4151;
+        font-size: 16px;
+      }
+       #api-root a {
+       margin: auto 8px;
+       text-decoration: auto;
+       }
     </style>
   </head>
 
   <body>
     <div id="swagger-ui"></div>
+    <div id="api-root">Go to <a href="/"> Api Root</a></div>
 
     <script src="{% static 'swagger-ui-bundle.js' %}"> </script>
     <script src="{% static 'swagger-ui-standalone-preset.js' %}"> </script>
@@ -55,7 +67,7 @@ and merge any changes.
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: "{% static "schema.yaml" %}",
+        url: "{% static 'schema.yaml' %}",
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [

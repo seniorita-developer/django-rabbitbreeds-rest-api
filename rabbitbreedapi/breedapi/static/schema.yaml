@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  title: ''
+  title: 'Rabbit Breeds Api'
   version: ''
 paths:
   /breeds/:
@@ -144,7 +144,7 @@ paths:
   /breeds-with-images/:
     get:
       operationId: listBreedsWithImagesViewSets
-      description: ''
+      description: 'Return only breeds with images.'
       parameters: []
       responses:
         '200':
@@ -157,7 +157,7 @@ paths:
   /random/:
     get:
       operationId: listBreeds
-      description: ''
+      description: 'Return random breed.'
       parameters:
       - name: page
         required: false
