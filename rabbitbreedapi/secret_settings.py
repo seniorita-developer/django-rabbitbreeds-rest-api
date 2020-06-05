@@ -1,0 +1,1 @@
+SECRET_KEY = '26cufhw%^d!=#q^=mb86!6*2-gf^kvqge0amvv-j!-hh%!&drg'
