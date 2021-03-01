@@ -1,5 +1,5 @@
 import os
-from secret_settings import SECRET_KEY
+SECRET_KEY = '26cufhw%^d!=#q^=mb86!6*2-gf^kvqge0amvv-j!-hh%!&drg'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
