@@ -11,6 +11,9 @@ Install Django and Django REST framework into the virtual environment
 
 Run server:
 - cd rabbitbreedapi
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py loaddata rabbit_breeds.json
 - python manage.py runserver
 
 Development server at http://127.0.0.1:8000/

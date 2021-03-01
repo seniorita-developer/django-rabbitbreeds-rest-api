@@ -2,10 +2,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from rabbitbreedapi.breedapi import views
+from rabbitbreedapi import views
 from django.views.generic import TemplateView
 from django.conf.urls.static import static
-from rabbitbreedapi import settings
+import settings
 
 router = routers.DefaultRouter()
 router.register(r'breeds', views.BreedViewSet)
