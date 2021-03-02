@@ -1,10 +1,10 @@
 import os
-SECRET_KEY = '26cufhw%^d!=#q^=mb86!6*2-gf^kvqge0amvv-j!-hh%!&drg'
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+SECRET_KEY = os.environ['SECRET_KEY']
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'rabbit-breed-api.herokuapp.com']
 
