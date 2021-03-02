@@ -36,7 +36,7 @@ ROOT_URLCONF = 'rabbitbreedapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'rabbitbreedapi/templates/')],
+        'DIRS': [os.path.join(BASE_DIR, 'rabbitbreedapi/rabbitbreedapi/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
