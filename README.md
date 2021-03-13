@@ -2,6 +2,10 @@ Rabbit Breeds Api created with Django Rest Framework.
 Data loaded from JSON file rabbit_breeds.json (scrapped from Wikipedia page)
 Documentation created with Swagger UI.
 
+Link to API:  https://rabbit-breed-api.herokuapp.com/
+
+Documentation: https://rabbit-breed-api.herokuapp.com/docs/
+
 To run the project on Windows:
 - venv\Scripts\activate
 
@@ -16,14 +20,14 @@ Run server:
 - python manage.py loaddata rabbit_breeds.json
 - python manage.py runserver
 
-Development server at http://127.0.0.1:8000/
-
-Documentation: http://127.0.0.1:8000/docs/
-
 Endpoints:
+
 GET /breeds​/
+
 GET /breeds​/{breed_id}​/
+
 GET /breeds-with-images​/
+
 GET /random​/
 
 
